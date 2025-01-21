@@ -1,5 +1,6 @@
 package com.project.userservice.configuration;
 
+import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.springframework.context.annotation.Bean;
@@ -29,7 +30,7 @@ public class KafkaConfig {
     public ConcurrentKafkaListenerContainerFactory<String, String> userCdcListenerContainerFactory() {
         ConcurrentKafkaListenerContainerFactory<String, String> factory = new ConcurrentKafkaListenerContainerFactory<>();
         factory.setConsumerFactory(userCdcConsumerFactory());
-        factory.setConcurrency(2);
+        factory.setConcurrency(5);
         return factory;
     }
 }

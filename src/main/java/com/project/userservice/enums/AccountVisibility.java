@@ -1,6 +1,6 @@
 package com.project.userservice.enums;
 
-public enum AccountPrivacy {
+public enum AccountVisibility {
     PRIVATE,
     PUBLIC
 }

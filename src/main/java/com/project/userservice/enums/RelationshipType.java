@@ -1,7 +1,7 @@
 package com.project.userservice.enums;
 
 public enum RelationshipType {
-    BLOCKED,
+    BLACKLIST,
     FOLLOWER,
     CLOSE_FRIEND,
 }
